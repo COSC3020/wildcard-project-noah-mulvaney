@@ -51,9 +51,19 @@ function closedFib(n) {
     return Math.floor((gr**(n + 1) - gc**(n + 1)) / Math.sqrt(5)); 
 }
 
-/*
-// Debug
-for (let i = 0; i < 15; ++i) {
-    console.log(fib(i), TRFib(i), RMFib(i), iterFib(i), closedFib(i));
+// Timing
+//      Referenced https://www.tutorialspoint.com/finding-the-time-elapsed-in-javascript
+function time(impl, n) {
+    let start = new Date();
+    impl(n);
+    let end = new Date();
+    return end - start;
 }
-*/
+
+for (let n = 0; n < 1000; n += 10) {
+    console.log("Fib", n, time(fib, n));
+    console.log("TR Fib", n, time(TRFib, n));
+    console.log("RM Fib", n, time(RMFib, n));
+    console.log("Iter Fib", n, time(iterFib, n));
+    console.log("Closed Fib", n, time(closedFib, n));
+}
