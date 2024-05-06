@@ -1,7 +1,7 @@
 // COSC3020 Wildcard Project
 // Approaches to the Fibonacci sequence
 // Noah Mulvaney
-// 17 Apr 2024
+// 6 May 2024
 
 // Ordinary recursive implementation
 function fib(n) {
@@ -60,10 +60,12 @@ function time(impl, n) {
     return end - start;
 }
 
-for (let n = 0; n < 1000; n += 10) {
+for (let n = 1; n < 130; n *= 2) {
     console.log("Fib", n, time(fib, n));
     console.log("TR Fib", n, time(TRFib, n));
     console.log("RM Fib", n, time(RMFib, n));
     console.log("Iter Fib", n, time(iterFib, n));
     console.log("Closed Fib", n, time(closedFib, n));
 }
+
+console.log("Done!");
