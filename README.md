@@ -1,6 +1,4 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/tTztJ7yI)
 # Wildcard Project
 
-You have a cool idea for an algorithms project? Use this repository. Make sure
-to explain what problem you're solving, how you're doing it, and that you test
-your code.
+I attempted a comparison of the different implementations for finding the Fibonacci numbers covered in this course. I copied the implementations from previous exercises and the slides. I then tried to run them with different input sizes to compare their time complexity. With the time available, I could not find a way to measure the time with enough precision to get an useful comparison. I also implemented a closed-form formula for the Fibonacci numbers using the golden ratio based on our discussion in MATH3700 Combinatorics of linear recurrences. It has a constant time complexity, which is very neat.
